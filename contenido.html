@@ -74,42 +74,69 @@
   </div>
 
   <!-- ── MODAL ADMIN ── -->
-  <h3 class="modal-admin__titulo" id="modalAdminTitulo">Nuevo caso</h3>
+<!-- ── MODAL ADMIN ── -->
+<div class="modal-overlay" id="modalAdminOverlay">
 
-<div class="form-field">
-  <label>Título</label>
-  <input type="text" id="inputNombre">
-</div>
-<div class="form-field">
-  <label>Año del incidente</label>
-  <input type="number" id="inputAnio">
-</div>
-<div class="form-field">
-  <label>Tipo</label>
-  <input type="text" id="inputTipo" placeholder="Avistamiento, Contacto...">
-</div>
-<div class="form-field">
-  <label>Descripción</label>
-  <textarea id="inputDescripcion"></textarea>
-</div>
-<div class="form-field">
-  <label>URL imagen</label>
-  <input type="text" id="inputImagen" placeholder="https://...">
-</div>
-<div class="form-field">
-  <label>Evidencias (separadas por coma)</label>
-  <input type="text" id="inputHabilidades" placeholder="Radar, Testimonio, Video FLIR...">
-</div>
-<div class="form-field">
-  <label>¿Está clasificado?</label>
-  <select id="inputPersonal">
-    <option value="false">No — Desclasificado</option>
-    <option value="true">Sí — Clasificado</option>
-  </select>
-</div>
-<div class="form-field">
-  <label>Duración del evento (min)</label>
-  <input type="number" id="inputAltura" placeholder="ej: 120">
+  <div class="modal-admin">
+
+    <button class="modal__cerrar" id="modalAdminCerrar">
+      ✕ cerrar
+    </button>
+
+    <h3 class="modal-admin__titulo" id="modalAdminTitulo">
+      Nuevo caso
+    </h3>
+
+    <div class="form-field">
+      <label>Título</label>
+      <input type="text" id="inputNombre">
+    </div>
+
+    <div class="form-field">
+      <label>Año del incidente</label>
+      <input type="number" id="inputAnio">
+    </div>
+
+    <div class="form-field">
+      <label>Tipo</label>
+      <input type="text" id="inputTipo" placeholder="Avistamiento, Contacto...">
+    </div>
+
+    <div class="form-field">
+      <label>Descripción</label>
+      <textarea id="inputDescripcion"></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>URL imagen</label>
+      <input type="text" id="inputImagen" placeholder="https://...">
+    </div>
+
+    <div class="form-field">
+      <label>Evidencias</label>
+      <input type="text" id="inputHabilidades">
+    </div>
+
+    <div class="form-field">
+      <label>¿Está clasificado?</label>
+
+      <select id="inputPersonal">
+        <option value="false">No — Desclasificado</option>
+        <option value="true">Sí — Clasificado</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label>Duración del evento</label>
+      <input type="number" id="inputAltura">
+    </div>
+
+    <button class="btn-guardar" id="btnGuardar">
+      Guardar caso
+    </button>
+
+  </div>
+
 </div>
 
   <!-- ── SCRIPT ── -->

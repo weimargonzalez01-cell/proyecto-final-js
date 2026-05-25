@@ -358,7 +358,7 @@ body.admin-mode .btn-agregar {
   inset: 0;
   background-color: rgba(26, 26, 26, 0.85);
   z-index: 200;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -367,6 +367,7 @@ body.admin-mode .btn-agregar {
 }
 
 .modal-overlay.active {
+  display: flex;
   opacity: 1;
   pointer-events: all;
 }
