@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="X-Files — Casos documentados de fenómenos no identificados.">
+  <meta name="keywords" content="X-Files, UAP, ovnis, fenómenos, casos, archivo">
+  <meta property="og:title" content="X-Files — Casos">
+  <meta property="og:description" content="Casos documentados de fenómenos aéreos no identificados.">
+  <title>X-Files — Casos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body  class="page-contenido">
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <a href="index.html" class="navbar__logo">X-Files</a>
+  <ul class="navbar__links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="contenido.html" class="active">Proyectos</a></li>
+    <li><a href="noticias.html">Archivo</a></li>
+  </ul>
+
+  <button class="navbar__hamburger" id="btnHamburger" aria-label="Menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+  <!-- Menú mobile -->
+  <div class="navbar__menu-mobile" id="menuMobile">
+    <a href="index.html">Inicio</a>
+    <a href="contenido.html">Proyectos</a>
+    <a href="noticias.html">Archivo</a>
+  </div>
+
+  <!-- ── PROYECTOS ── -->
+  <main class="proyectos">
+
+    <div class="proyectos__header">
+      <div class="proyectos__controles">
+        <button id="btnOrdenarNombre">Nombre ↕</button>
+        <button id="btnOrdenarAnio">Año ↕</button>
+      </div>
+    </div>
+
+    <!-- Grid — se genera desde app.js -->
+    <div class="grid" id="grid"></div>
+
+  </main>
+
+  <!-- ── BOTÓN AGREGAR (solo admin) ── -->
+  <button class="btn-agregar" id="btnAgregar">+ Proyecto</button>
+
+  <!-- ── MODAL DETALLE ── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal__cerrar" id="modalCerrar">✕ cerrar</button>
+
+      <div class="modal__img">
+        <img id="modalImg" src="" alt="">
+      </div>
+
+      <div class="modal__info">
+        <h2 class="modal__titulo" id="modalTitulo"></h2>
+        <p class="modal__meta" id="modalMeta"></p>
+        <p class="modal__descripcion" id="modalDescripcion"></p>
+        <p class="modal__meta" id="modalHabilidades"></p>
+      </div>
+
+      <div class="modal__bocetos" id="modalBocetos"></div>
+    </div>
+  </div>
+
+  <!-- ── MODAL ADMIN ── -->
+  <h3 class="modal-admin__titulo" id="modalAdminTitulo">Nuevo caso</h3>
+
+<div class="form-field">
+  <label>Título</label>
+  <input type="text" id="inputNombre">
+</div>
+<div class="form-field">
+  <label>Año del incidente</label>
+  <input type="number" id="inputAnio">
+</div>
+<div class="form-field">
+  <label>Tipo</label>
+  <input type="text" id="inputTipo" placeholder="Avistamiento, Contacto...">
+</div>
+<div class="form-field">
+  <label>Descripción</label>
+  <textarea id="inputDescripcion"></textarea>
+</div>
+<div class="form-field">
+  <label>URL imagen</label>
+  <input type="text" id="inputImagen" placeholder="https://...">
+</div>
+<div class="form-field">
+  <label>Evidencias (separadas por coma)</label>
+  <input type="text" id="inputHabilidades" placeholder="Radar, Testimonio, Video FLIR...">
+</div>
+<div class="form-field">
+  <label>¿Está clasificado?</label>
+  <select id="inputPersonal">
+    <option value="false">No — Desclasificado</option>
+    <option value="true">Sí — Clasificado</option>
+  </select>
+</div>
+<div class="form-field">
+  <label>Duración del evento (min)</label>
+  <input type="number" id="inputAltura" placeholder="ej: 120">
+</div>
+
+  <!-- ── SCRIPT ── -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
