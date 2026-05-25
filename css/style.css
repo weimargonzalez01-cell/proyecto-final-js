@@ -386,14 +386,14 @@ body.admin-mode .btn-agregar {
 
 .modal__cerrar {
   position: absolute;
-  top: var(--gap-sm);
-  right: var(--gap-sm);
+  top: 35px;
+  right: 15px;
   font-size: var(--text-meta);
   color: var(--color-text-soft);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   transition: color var(--transition);
-  z-index: 10000;
+  z-index: 999;
 }
 
 .modal__cerrar:hover {
