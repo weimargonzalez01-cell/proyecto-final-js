@@ -401,7 +401,7 @@ body.admin-mode .btn-agregar {
 }
 
 .modal__img {
-  margin-top: 8rem;
+  margin-top: 4rem;
   max-height: 250px;
   object-fit: cover;
   border-radius: var(--radius);
