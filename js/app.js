@@ -87,6 +87,17 @@ function cargarDesdeStorage() {
 let modoAdmin = false;
 let proyectoEditandoId = null;
 
+
+// ─────────────────────────────────────────
+// ESTRUCTURAS — Pila y Cola
+// ─────────────────────────────────────────
+
+// PILA → historial de casos abiertos
+let pilaRecientes = [];
+
+// COLA → eventos del sistema
+let colaEventos = [];
+
 // ─────────────────────────────────────────
 // RENDER — Dibuja las cards en el grid
 // ─────────────────────────────────────────
@@ -151,6 +162,11 @@ function abrirModalDetalle(id) {
     caso.evidencias.join(' · ');
 
   document.getElementById('modalOverlay').classList.add('active');
+
+  // PILA → guardar historial de casos abiertos
+  pilaRecientes.push(caso.titulo);
+
+  console.log('Pila de recientes:', pilaRecientes);
 }
 
 function cerrarModalDetalle() {
@@ -245,6 +261,11 @@ function guardarProyecto() {
     });
   }
 
+  // COLA → registrar evento
+  colaEventos.push('Caso agregado o editado');
+
+  console.log('Procesando cola:', colaEventos.shift());
+
   cerrarModalAdmin();
   guardarEnStorage();
   renderGrid();
@@ -259,6 +280,9 @@ function eliminarProyecto(id) {
   if (!caso) return;
 
   if (confirm(`¿Eliminar "${caso.titulo}"?`)) {
+        // COLA → registrar eliminación
+    colaEventos.push(`Caso eliminado: ${caso.titulo}`);
+    console.log('Procesando cola:', colaEventos.shift());
     proyectos = proyectos.filter(p => p.id !== id);
     guardarEnStorage();
     renderGrid();
