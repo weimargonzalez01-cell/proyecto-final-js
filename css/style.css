@@ -386,7 +386,7 @@ body.admin-mode .btn-agregar {
 
 .modal__cerrar {
   position: absolute;
-  top: 35px;
+  top: 55px;
   right: 15px;
   font-size: var(--text-meta);
   color: var(--color-text-soft);
@@ -401,7 +401,7 @@ body.admin-mode .btn-agregar {
 }
 
 .modal__img {
-  margin-top: 4rem;
+  margin-top: 8rem;
   max-height: 250px;
   object-fit: cover;
   border-radius: var(--radius);
