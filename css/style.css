@@ -393,6 +393,7 @@ body.admin-mode .btn-agregar {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   transition: color var(--transition);
+  z-index: 10000;
 }
 
 .modal__cerrar:hover {
@@ -400,6 +401,9 @@ body.admin-mode .btn-agregar {
 }
 
 .modal__img {
+  margin-top: 4rem;
+  max-height: 250px;
+  object-fit: cover;
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 16/9;
