@@ -322,18 +322,16 @@ function ordenarPorAnio() {
 // ─────────────────────────────────────────
 
 function toggleAdmin() {
+
   if (modoAdmin) {
     modoAdmin = false;
     document.body.classList.remove('admin-mode');
+
   } else {
-    const clave = prompt('Contraseña:');
-    if (clave === '1234') {
-      modoAdmin = true;
-      document.body.classList.add('admin-mode');
-    } else if (clave !== null) {
-      alert('Contraseña incorrecta.');
-    }
+    modoAdmin = true;
+    document.body.classList.add('admin-mode');
   }
+
 }
 
 // ─────────────────────────────────────────
